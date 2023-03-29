@@ -49,7 +49,8 @@ class LoremIpsum extends HTMLElement {
         this.shadow.innerHTML = html
     }
     attributeChangedCallback(name, oldValue, newValue) {
-        this.shadow.innerHTML = this.list(newValue)
+        console.log(this, this.shadow)
+        if(this.shadow) this.shadow.innerHTML = this.list(newValue)
     }
 }
 export { ContentCard, ContentHeading, LoremIpsum }
